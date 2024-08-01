@@ -69,21 +69,21 @@ const Carloan = () => {
   };
   return (
     <>
-      <div className="flex  justify-center items-center ">
+      <div className="flex  justify-center items-center">
         <div
-          className={`absolute top-4  border w-[450px] h-auto flex flex-col justify-between items-center p-4 
-    shadow-2xl shadow-black ${
-      theme === "Dark" ? "bg-zinc-600" : "bg-white"
+          className={`absolute top-4  border sm:w-[450px] w-[90%]  h-auto  flex flex-col  items-center p-4 
+    shadow-2xl shadow-black 
+      ${theme === "Dark" ? "bg-zinc-600" : "bg-white"
     } transition-all`}
         >
           <h1
-            className="text-4xl font-bold  
+            className="sm:text-4xl text-2xl font-bold  
      outline-dotted m-2 w-full text-center p-2 bg-slate-50"
           >
             Car Loan
           </h1>
           <div className="m-2  flex">
-            <img src={carPic} alt="" className="p-2 w-[350px]" />
+            <img src={carPic} alt="" className="p-2 sm:w-[350px] w-[200px] " />
             <div className=" w-20 absolute left-0 " onClick={toggleTheme}>
               <button className="p-4 rounded-md bg-black text-[20px]">
                 {open ? (
@@ -94,12 +94,12 @@ const Carloan = () => {
               </button>
             </div>
           </div>
-          <div className="flex flex-col m-2 p-2 gap-4 w-full ">
+          <div className="flex flex-col m-2 p-2 gap-4 w-full">
             <input
               type="text"
               name=""
               id=""
-              className={`text-[20px] font-bold p-2 border-none outline-none ${
+              className={`sm:text-[20px]  font-bold sm:p-2 p-[2px] border-none rounded-[3px] outline-none ${
                 theme === "Dark" ? "bg-white text-black" : "bg-black text-white"
               } focus:border-sky-500 focus:ring-2 focus:rounded-[5px] transition-all focus:ring-sky-500`}
               placeholder="Enter your price & Get 30%"
@@ -110,7 +110,7 @@ const Carloan = () => {
               type="text"
               name=""
               id=""
-              className={`text-[20px] font-bold p-2 border-none outline-none placeholder:text-[18px] placeholder:text-slate-800 placeholder:font-normal ${
+              className={`sm:text-[20px] sm:text-left text-center font-bold sm:p-2 rounded-[3px] border-none outline-none placeholder:text-[18px] placeholder:text-slate-800 placeholder:font-normal ${
                 theme === "Dark" ? "bg-white text-black" : "bg-black text-white"
               }`}
               readOnly
@@ -121,7 +121,7 @@ const Carloan = () => {
               type="text"
               name=""
               id=""
-              className={`text-[20px] font-bold p-2 border-none outline-none ${
+              className={`sm:text-[20px] font-bold rounded-[3px] sm:p-2 sm:text-left text-center border-none outline-none ${
                 theme === "Dark" ? "bg-white text-black" : "bg-black text-white"
               }`}
               readOnly
@@ -131,7 +131,7 @@ const Carloan = () => {
 
             <div className="flex relative">
               <button
-                className="bg-white hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+                className="bg-white hover:bg-gray-300 text-gray-800 font-bold sm:py-2 px-4 rounded inline-flex items-center"
                 onClick={toggleDropdown}
               >
                 {selectedOption}
@@ -141,7 +141,7 @@ const Carloan = () => {
                 {/* Dropdown icon */}
               </button>
               <ul
-                className={`absolute right-0 top-14 ${
+                className={`absolute right-0 sm:top-14 top-[25px] ${
                   isOpen ? "block" : "hidden"
                 } bg-white text-gray-800 pt-1 w-full`}
               >
@@ -160,7 +160,7 @@ const Carloan = () => {
               type="text"
               name=""
               id=""
-              className={`text-[20px] font-bold p-2 border-none outline-none ${
+              className={`sm:text-[20px] font-bold text-center rounded-[3px] sm:text-left sm:p-2 border-none outline-none ${
                 theme === "Dark" ? "bg-white text-black" : "bg-black text-white"
               }`}
               readOnly
